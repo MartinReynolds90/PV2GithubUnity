@@ -225,7 +225,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4465694553978754388, guid: 6e8c5834553ec0942be2536b8929f05c, type: 3}
       propertyPath: m_Color.b
+<<<<<<< Updated upstream
       value: 0.85882354
+=======
+      value: 0.79900235
+>>>>>>> Stashed changes
       objectReference: {fileID: 0}
     - target: {fileID: 4465694553978754388, guid: 6e8c5834553ec0942be2536b8929f05c, type: 3}
       propertyPath: m_Color.g
@@ -233,7 +237,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4465694553978754388, guid: 6e8c5834553ec0942be2536b8929f05c, type: 3}
       propertyPath: m_Color.r
+<<<<<<< Updated upstream
       value: 0.7887862
+=======
+      value: 0.85882354
+>>>>>>> Stashed changes
       objectReference: {fileID: 0}
     - target: {fileID: 6024408788650272709, guid: 6e8c5834553ec0942be2536b8929f05c, type: 3}
       propertyPath: m_LocalPosition.x
