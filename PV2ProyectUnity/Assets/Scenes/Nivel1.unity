@@ -325,6 +325,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemigo
       objectReference: {fileID: 0}
+    - target: {fileID: 4465694553978754388, guid: 6e8c5834553ec0942be2536b8929f05c, type: 3}
+      propertyPath: m_Color.b
+      value: 0.85882354
+      objectReference: {fileID: 0}
+    - target: {fileID: 4465694553978754388, guid: 6e8c5834553ec0942be2536b8929f05c, type: 3}
+      propertyPath: m_Color.g
+      value: 0.8057852
+      objectReference: {fileID: 0}
+    - target: {fileID: 4465694553978754388, guid: 6e8c5834553ec0942be2536b8929f05c, type: 3}
+      propertyPath: m_Color.r
+      value: 0.18039213
+      objectReference: {fileID: 0}
     - target: {fileID: 6024408788650272709, guid: 6e8c5834553ec0942be2536b8929f05c, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1.4835422
