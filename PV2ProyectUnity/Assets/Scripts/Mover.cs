@@ -11,10 +11,13 @@ public class Mover : MonoBehaviour
     // Variables de uso interno en el script
     private float moverHorizontal;
     private Vector2 direccion;
+    
 
     // Variable para referenciar otro componente del objeto
     private Rigidbody2D miRigidbody2D;
-
+    public void detenerMovimiento() {///////////////////////////////////
+        velocidad = 0f;
+    }
     // Codigo ejecutado cuando el objeto se activa en el nivel
     private void OnEnable()
     {

@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Jobs;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -16,7 +17,7 @@ public class PlayerHealth : MonoBehaviour
         if (collision.gameObject.CompareTag("Player")) {
             jugador = collision.gameObject.GetComponent<Jugador>();
             jugador.ModificarVida(-puntos);
-
+   
             if (hud == null)
             {
                 hud = GameObject.Find("HUD").GetComponent<HUDController>();
@@ -25,7 +26,7 @@ public class PlayerHealth : MonoBehaviour
 
             if (hud != null)
             {
-                hud.ActualizaVidas(jugador.GetVidas().ToString()); //  las vidas actuales
+                hud.ActualizaTexto(jugador.GetVidas().ToString()); //  las vidas actuales
                 Debug.Log("HUD != NULL/////HUD != NULL////HUD != NULL ");
             }
             else
@@ -36,12 +37,12 @@ public class PlayerHealth : MonoBehaviour
         }
 
     }
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (!collision.gameObject.CompareTag("Meta")) { return; }
+    //private void OnTriggerEnter2D(Collider2D collision)
+    //{
+    //    if (!collision.gameObject.CompareTag("Meta")) { return; }
 
-        Debug.Log("GANASTE");
-    }
+    //    Debug.Log("GANASTE");
+    //}
     //public void LoseLife()
     //{
     //    lives--;

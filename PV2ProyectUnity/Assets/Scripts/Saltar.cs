@@ -17,6 +17,10 @@ public class Saltar : MonoBehaviour
     // Variable para referenciar otro componente del objeto
     private Rigidbody2D miRigidbody2D;
 
+    public void detenerSalto() {//------------------------------
+        fuerzaSalto = 0;
+    }
+
     // Codigo ejecutado cuando el objeto se activa en el nivel
     private void OnEnable()
     {
