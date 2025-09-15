@@ -14,8 +14,8 @@ public class Jugador : MonoBehaviour
     [SerializeField] private UnityEvent<string> OnTextFin;//(((((((((((((((((
     private void Start()
     {
-        OnLivesChanged.Invoke(vida);//inicializo los eventos con invoke
-        OnTextChanged.Invoke(vida.ToString());
+         OnLivesChanged.Invoke(vida);//inicializo los eventos con invoke
+         OnTextChanged.Invoke(vida.ToString());
     }
     // Update is called once per frame
     public void ModificarVida(int puntos)
