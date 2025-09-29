@@ -12,12 +12,14 @@ public class Coleccionar : MonoBehaviour
     private Queue<GameObject> objetivos;
     private Stack<GameObject> items;
 
+
     private bool presionado = false;
 
     private void Awake()
     {
         objetivos = new Queue<GameObject>();
         items = new Stack<GameObject>();
+
         CargarObjetivos();
         VerObjetivos();
 
@@ -42,11 +44,12 @@ public class Coleccionar : MonoBehaviour
 
         if (!colision.gameObject.CompareTag("Coleccionables")) { return; }
         if (objetivos.Count == 0) { return; }//SI la lista esta vacia
+
         GameObject objetivo = objetivos.Peek(); //Obtiene la referencia al objeto sin sacarlo de la cola
 
-        Debug.Log("Colisionó con: " + colision.gameObject.name);
-        Debug.Log("Objeto raíz: " + colision.transform.root.name);
-        Debug.Log("Objetivo esperado: " + objetivo.name);
+        //Debug.Log("Colisionó con: " + colision.gameObject.name);
+        //Debug.Log("Objeto raíz: " + colision.transform.root.name);
+        //Debug.Log("Objetivo esperado: " + objetivo.name);
 
         if (EsObjetivoActual(colision.gameObject, objetivo)) {
             objetivo.SetActive(false);
@@ -59,11 +62,21 @@ public class Coleccionar : MonoBehaviour
     }
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.F1)) {
-            if (items.Count == 0) return;
-            items.Pop();
-            UsarItem();
+        if (Input.GetKeyDown(KeyCode.F1))
+        {
+            //if (items.Count == 0) return;
+            if (items.Count > 0)
+            {
+                //items.Pop();
+                UsarItem();
+            }
+            else {
+                Debug.LogWarning("No hay mas elementos");
+            }
+            //items.Pop();
+            //UsarItem();
         }
+
     }
 
     private void UsarItem()
@@ -72,4 +85,5 @@ public class Coleccionar : MonoBehaviour
         item.transform.SetParent(null);
         item.SetActive(true);
     }
+
 }
