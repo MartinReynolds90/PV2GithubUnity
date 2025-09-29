@@ -12,6 +12,7 @@ public class Coleccionar : MonoBehaviour
     private Queue<GameObject> objetivos;
     private Stack<GameObject> items;
 
+    private Progresion progresionJugador;
 
     private bool presionado = false;
 
@@ -22,6 +23,8 @@ public class Coleccionar : MonoBehaviour
 
         CargarObjetivos();
         VerObjetivos();
+
+        progresionJugador = GetComponent<Progresion>(); 
 
     }
 
@@ -47,16 +50,18 @@ public class Coleccionar : MonoBehaviour
 
         GameObject objetivo = objetivos.Peek(); //Obtiene la referencia al objeto sin sacarlo de la cola
 
-        //Debug.Log("Colisionó con: " + colision.gameObject.name);
-        //Debug.Log("Objeto raíz: " + colision.transform.root.name);
-        //Debug.Log("Objetivo esperado: " + objetivo.name);
+
 
         if (EsObjetivoActual(colision.gameObject, objetivo)) {
             objetivo.SetActive(false);
             objetivos.Dequeue(); //Quita el elemento de la cola a diferencia del Peek();
             items.Push(objetivo);
+
             VerObjetivos();
             objetivo.transform.SetParent(Bolsa.transform);
+
+            progresionJugador.GanarExperiencia(10);
+
         }
         
     }
@@ -64,17 +69,14 @@ public class Coleccionar : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.F1))
         {
-            //if (items.Count == 0) return;
+            Debug.Log("aedadadadad00" + progresionJugador.Nivel);
             if (items.Count > 0)
             {
-                //items.Pop();
                 UsarItem();
             }
             else {
                 Debug.LogWarning("No hay mas elementos");
             }
-            //items.Pop();
-            //UsarItem();
         }
 
     }
