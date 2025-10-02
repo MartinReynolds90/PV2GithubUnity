@@ -47,14 +47,14 @@ public class Coleccionar : MonoBehaviour
     {
 
 
-        if (!colision.gameObject.CompareTag("Coleccionables")) { return; }
-        if (objetivos.Count == 0) { return; }//SI la lista esta vacia
+        if (!colision.gameObject.CompareTag("Coleccionables")) { return; }//si no es un coleccionable sale de la funcion
+        if (objetivos.Count == 0) { return; }//SI la lista esta vacia sale de la funcion
 
         GameObject objetivo = objetivos.Peek(); //Obtiene la referencia al objeto sin sacarlo de la cola
 
 
 
-        if (EsObjetivoActual(colision.gameObject, objetivo)) {
+        if (EsObjetivoActual(colision.gameObject, objetivo)) {// pregunta si el que colisiono es el objeto que corresponde en la cola
             objetivo.SetActive(false);
             objetivos.Dequeue(); //Quita el elemento de la cola a diferencia del Peek();
             items.Push(objetivo);
@@ -71,7 +71,7 @@ public class Coleccionar : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.F1))
         {
-            Debug.Log("Elementos en la lista: " + progresionJugador.Nivel);
+            Debug.Log("Elementos en la lista: " + progresionJugador.PerfilJugador.Nivel);
             if (items.Count > 0)
             {
                 UsarItem();
