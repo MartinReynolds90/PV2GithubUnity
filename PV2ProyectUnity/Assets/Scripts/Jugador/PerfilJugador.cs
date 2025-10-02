@@ -6,7 +6,13 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "NuevoPerfilJugador", menuName = "SO/PerfilJugador")]
 public class PerfilJugador : ScriptableObject
 {
+    [SerializeField]
+    float velocidad = 5f;
+    public float Velocidad{ get => velocidad; set => velocidad = value; }
 
+    [SerializeField]
+    private float fuerzaSalto = 5f;
+    public float FuerzaSalto { get => fuerzaSalto; set => fuerzaSalto = value; }
 
     [SerializeField]
     [Range(10, 50)]
