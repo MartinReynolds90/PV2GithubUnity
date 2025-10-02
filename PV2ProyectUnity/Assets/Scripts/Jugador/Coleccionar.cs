@@ -24,7 +24,8 @@ public class Coleccionar : MonoBehaviour
         CargarObjetivos();
         VerObjetivos();
 
-        progresionJugador = GetComponent<Progresion>(); 
+        progresionJugador = GetComponent<Progresion>();
+   
 
     }
 
@@ -32,6 +33,7 @@ public class Coleccionar : MonoBehaviour
         foreach (Transform objetivo in padreObjetivos) {
             objetivos.Enqueue(objetivo.gameObject);
         }
+
     }
     private void VerObjetivos() {
         foreach (GameObject objetivo in objetivos) {
@@ -69,7 +71,7 @@ public class Coleccionar : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.F1))
         {
-            Debug.Log("aedadadadad00" + progresionJugador.Nivel);
+            Debug.Log("Elementos en la lista: " + progresionJugador.Nivel);
             if (items.Count > 0)
             {
                 UsarItem();

@@ -1898,7 +1898,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4765893685108086538, guid: 3a0b0d4067104ed468827838f6cfd562, type: 3}
   m_PrefabInstance: {fileID: 5881757074048970790}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 1616591271}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b481e843dee196c40a3c78c5a6aafc7b, type: 3}
@@ -3313,6 +3313,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1562524450}
   m_CullTransparentMesh: 1
+--- !u!1 &1616591271 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4483207113635819556, guid: 3a0b0d4067104ed468827838f6cfd562, type: 3}
+  m_PrefabInstance: {fileID: 5881757074048970790}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1616591279
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1616591271}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef04ce255b97b074a847dbaaa7ae67ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  experienciaProximoNivel: 0
+  escalarExperiencia: 0
 --- !u!1001 &1623833433
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4352,7 +4371,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4483207113635819556, guid: 3a0b0d4067104ed468827838f6cfd562, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1616591279}
   m_SourcePrefab: {fileID: 100100000, guid: 3a0b0d4067104ed468827838f6cfd562, type: 3}
 --- !u!1001 &5926174146704251999
 PrefabInstance:

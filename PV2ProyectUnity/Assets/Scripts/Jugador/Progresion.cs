@@ -21,7 +21,7 @@ public class Progresion : MonoBehaviour
 
     public void GanarExperiencia(int nuevaExperiencia) {
         experiencia += nuevaExperiencia;
-
+        
         if (experiencia >= experienciaProximoNivel) {
             SubirNivel();
         }
