@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   velocidad: 10
   fuerzaSalto: 10
-  experienciaProximoNivel: 50
+  experienciaProximoNivel: 43
   escalarExperiencia: 10
