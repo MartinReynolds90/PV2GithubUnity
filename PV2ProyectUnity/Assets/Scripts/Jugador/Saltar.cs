@@ -8,7 +8,7 @@ public class Saltar : MonoBehaviour
 
     // Variables a configurar desde el editor
 
-    //[SerializeField] private float fuerzaSalto = 5f;
+    private float defaultFuerzaSalto = 10f;
     [SerializeField]
     private PerfilJugador perfilJugador;
 
@@ -18,7 +18,10 @@ public class Saltar : MonoBehaviour
 
     // Variable para referenciar otro componente del objeto
     private Rigidbody2D miRigidbody2D;
-
+    private void Start()
+    {
+        perfilJugador.FuerzaSalto = defaultFuerzaSalto;//le doy fuerza de salto por defecto al reiniciar el juego
+    }
     public void detenerSalto() {//------------------------------
         perfilJugador.FuerzaSalto = 0;
     }

@@ -12,3 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c2f9c83c73aaaf46b86a08c3e6ee335, type: 3}
   m_Name: NuevoPerfilJugador
   m_EditorClassIdentifier: 
+  velocidad: 0
+  fuerzaSalto: 0
+  experienciaProximoNivel: 60
+  escalarExperiencia: 10
