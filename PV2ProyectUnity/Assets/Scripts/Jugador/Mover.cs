@@ -6,6 +6,9 @@ public class Mover : MonoBehaviour
 {
 
     //[SerializeField] float velocidad = 5f;
+
+    private Animator animator;//ANIMATOR---------------
+
     private float defaultVelocidad = 10;
     [SerializeField]
     private PerfilJugador perfilJugador;
@@ -18,6 +21,7 @@ public class Mover : MonoBehaviour
     private void Start()
     {
         perfilJugador.Velocidad = defaultVelocidad;//reactivo la velocidad por defecto cuando reinicia el juego
+        animator = GetComponent<Animator>();//ANIMATOR---------------
     }
     // Variable para referenciar otro componente del objeto
     private Rigidbody2D miRigidbody2D;
@@ -34,6 +38,7 @@ public class Mover : MonoBehaviour
     private void Update()
     {
         moverHorizontal = Input.GetAxis("Horizontal");
+        animator.SetFloat("Horizontal", moverHorizontal);//ANIMATOR-------
         direccion = new Vector2(moverHorizontal, 0f);
 
     }
