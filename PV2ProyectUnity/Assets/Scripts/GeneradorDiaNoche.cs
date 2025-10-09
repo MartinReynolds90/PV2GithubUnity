@@ -21,12 +21,25 @@ public class NewMonoBehaviourScript : MonoBehaviour
     
     IEnumerator CambiarColor(float tiempo)
     {
-        for(int i = 0; i< duracionDia; i++) { 
+        Color colorDestino = camara.backgroundColor == colorDia ? colorNoche : colorDia;
+        float duracionCiclo = tiempo * 0.6f;
+        float duracionCambio = tiempo * 0.4f;
+
+        for (int i = 0; i< duracionDia; i++) { 
             yield return new WaitForSeconds(tiempo);
-            camara.backgroundColor = camara.backgroundColor == colorDia ?
-                                      camara.backgroundColor = colorNoche :
-                                      camara.backgroundColor = colorDia;
-            
+
+            float tiempoTranscurrido = 0;
+
+            while (tiempoTranscurrido < duracionCambio) {
+                tiempoTranscurrido += Time.deltaTime;
+                float t = tiempoTranscurrido / duracionCambio;
+
+                float smoothT = Mathf.SmoothStep(0f, 1f, t);//suavisa t
+                camara.backgroundColor = Color.Lerp(camara.backgroundColor, colorDestino, smoothT);
+                yield return null;
+            }
+
+            colorDestino = camara.backgroundColor == colorDia ? colorNoche : colorDia;
         }
     }
 }

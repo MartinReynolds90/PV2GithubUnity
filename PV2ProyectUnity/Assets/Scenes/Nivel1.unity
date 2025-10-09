@@ -76361,8 +76361,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   camara: {fileID: 1898586028}
   colorNoche: {r: 0.754717, g: 0.31683874, b: 0.31683874, a: 1}
-  duracionDia: 5
-  dias: 12
+  duracionDia: 4.8
+  dias: 14
 --- !u!4 &2030280079
 Transform:
   m_ObjectHideFlags: 0
