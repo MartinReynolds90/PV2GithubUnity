@@ -17,10 +17,10 @@ public class GeneradorObjetoAleatorio : MonoBehaviour
 
     void Start()
     {
-        Debug.Log("GeneradorObjetoAleatorio activo en: " + gameObject.name);
+        //Debug.Log("GeneradorObjetoAleatorio activo en: " + gameObject.name);
 
 
-        InvokeRepeating(nameof(GenerarObjetoAleatorio), tiempoEspera, tiempoIntervalo);
+        //InvokeRepeating(nameof(GenerarObjetoAleatorio), tiempoEspera, tiempoIntervalo);
     }
 
     // Update is called once per frame
@@ -30,17 +30,17 @@ public class GeneradorObjetoAleatorio : MonoBehaviour
         GameObject prefabAleatorio = objetoPrefabs[indexAleatorio];//guarda en un objeto local el objeto del arreglo que indica el indice indexAleatorio
         Instantiate(prefabAleatorio, transform.position, Quaternion.identity);
     }
+
+    private void OnBecameInvisible()
+    {
+        Debug.Log("El spriteRender deja de ser vidible por las camaras en la escena");
+        CancelInvoke(nameof(GenerarObjetoAleatorio));
+    }
+
+    private void OnBecameVisible()
+    {
+        Debug.Log("El spriteRende es visible por las camaras en la escena");
+        InvokeRepeating(nameof(GenerarObjetoAleatorio), tiempoEspera, tiempoIntervalo);
+    }
 }
-    //private void OnBecameInvisible()
-    //{
-    //    Debug.Log("El spriteRender deja de ser vidible por las camaras en la escena");
-    //    CancelInvoke(nameof(GenerarObjetoAleatorio));
-    //}
-
-    //private void OnBecameVisible()
-    //{
-    //    Debug.Log("El spriteRende es visible por las camaras en la escena");
-    //    InvokeRepeating(nameof(GenerarObjetoAleatorio),tiempoEspera, tiempoIntervalo);
-    //}
-
 
