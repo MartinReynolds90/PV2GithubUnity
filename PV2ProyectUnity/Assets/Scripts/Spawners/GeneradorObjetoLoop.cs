@@ -1,28 +1,28 @@
-//using System.Collections;
-//using System.Collections.Generic;
-//using UnityEngine;
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
 
-//public class GeneradorObjetoLoop : MonoBehaviour
-//{
-//    [SerializeField] private GameObject objetoPrefab;
+public class GeneradorObjetoLoop : MonoBehaviour
+{
+    [SerializeField] private GameObject objetoPrefab;
 
-//    [SerializeField]
-//    [Range(0.5f, 5f)]
-//    private float tiempoEspera;
+    [SerializeField]
+    [Range(0.5f, 5f)]
+    private float tiempoEspera;
 
 
-//    [SerializeField]
-//    [Range(0.5f, 5f)]
-//    private float tiempoIntervalo;
+    [SerializeField]
+    [Range(0.5f, 5f)]
+    private float tiempoIntervalo;
 
-//    void Start()
-//    {
-//        InvokeRepeating(nameof(GenerarObjetoLoop), tiempoEspera, tiempoIntervalo);     
-//    }
+    void Start()
+    {
+        InvokeRepeating(nameof(GenerarObjetoLoop), tiempoEspera, tiempoIntervalo);
+    }
 
-//    // Update is called once per frame
-//    void GenerarObjetoLoop()
-//    {
-//        Instantiate(objetoPrefab, transform.position, Quaternion.identity);
-//    }
-//}
+    // Update is called once per frame
+    void GenerarObjetoLoop()
+    {
+        Instantiate(objetoPrefab, transform.position, Quaternion.identity);
+    }
+}
