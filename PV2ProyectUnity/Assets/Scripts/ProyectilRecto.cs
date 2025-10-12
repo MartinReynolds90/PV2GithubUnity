@@ -10,11 +10,19 @@ public class ProyectilRecto : MonoBehaviour
 
     private Rigidbody2D rb;
 
-    void Start()
+    private void Awake()
     {
-        rb = GetComponent<Rigidbody2D>();
-        Vector2 direction = Vector2.left;
-        rb.velocity = direction * speed;
+         rb = GetComponent<Rigidbody2D>();
     }
 
+    private void OnEnable() {
+        Mover();
+    }
+
+    private void Mover()
+    {
+       
+        Vector2 direction = Vector2.left;
+        rb.linearVelocity = direction * speed;
+    }
 }

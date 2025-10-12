@@ -10,14 +10,15 @@ public class PlayerHealth : MonoBehaviour
     public Jugador jugador;
     public HUDController hud;
 
-    //public UnityEvent<int> OnLivesChanged;
+
   
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Player")) {
             jugador = collision.gameObject.GetComponent<Jugador>();
             jugador.ModificarVida(-puntos);
-   
+           
+
             if (hud == null)
             {
                 hud = GameObject.Find("HUD").GetComponent<HUDController>();
@@ -37,20 +38,5 @@ public class PlayerHealth : MonoBehaviour
         }
 
     }
-    //private void OnTriggerEnter2D(Collider2D collision)
-    //{
-    //    if (!collision.gameObject.CompareTag("Meta")) { return; }
 
-    //    Debug.Log("GANASTE");
-    //}
-    //public void LoseLife()
-    //{
-    //    lives--;
-    //    OnLivesChanged.Invoke(lives);
-
-    //    if (lives <= 0)
-    //    {
-    //        // Aquí puedes manejar la situación de Game Over
-    //    }
-    //}
 }

@@ -2,9 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GeneradorObjetoLoop : MonoBehaviour
+public class GeneradorObjetoLoopWithPool : MonoBehaviour
 {
-    [SerializeField] private GameObject objetoPrefab;
+    //[SerializeField] private GameObject objetoPrefab;
 
     [SerializeField]
     [Range(0.5f, 5f)]
@@ -15,6 +15,13 @@ public class GeneradorObjetoLoop : MonoBehaviour
     [Range(0.5f, 5f)]
     private float tiempoIntervalo;
 
+    private ObjectPool objectPool;
+
+    private void Awake()
+    {
+        objectPool = GetComponent<ObjectPool>();
+    }
+
     void Start()
     {
         InvokeRepeating(nameof(GenerarObjetoLoop), tiempoEspera, tiempoIntervalo);
@@ -23,6 +30,14 @@ public class GeneradorObjetoLoop : MonoBehaviour
     // Update is called once per frame
     void GenerarObjetoLoop()
     {
-        Instantiate(objetoPrefab, transform.position, Quaternion.identity);
+        GameObject pooledObject = objectPool.GetPooledObject();
+
+        if (pooledObject != null)
+        {
+            pooledObject.transform.position = transform.position;
+            pooledObject.transform.rotation = Quaternion.identity;
+            pooledObject.SetActive(true);
+        }
+       
     }
 }
