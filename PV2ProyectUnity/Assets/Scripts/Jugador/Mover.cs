@@ -9,13 +9,14 @@ public class Mover : MonoBehaviour
 
     private Animator animator;//ANIMATOR---------------
 
-    private float defaultVelocidad = 10;
+    [SerializeField]
+    private float defaultVelocidad = 10;// velocidad por defecto
     [SerializeField]
     private PerfilJugador perfilJugador;
     
     
     // Variables de uso interno en el script
-    private float moverHorizontal;// velocidad por defecto
+    private float moverHorizontal;
     private Vector2 direccion;
 
     private void Start()
