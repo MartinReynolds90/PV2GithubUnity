@@ -15,8 +15,9 @@ public class Herir : MonoBehaviour
         {
             Jugador jugador = collision.gameObject.GetComponent<Jugador>(); 
             jugador.ModificarVida(-puntos);
-            Debug.Log(" PUNTOS DE DAÑO REALIZADOS AL JUGADOR " + puntos);
-            gameObject.SetActive(false);
+            Debug.Log(" PUNTOS DE DAÑO REALIZADOS AL JUGADOR " + puntos);//mensaje en consola
+            gameObject.SetActive(false);//desactiva el objeto que colisiona con el jugador
+
             if (hud == null)
             {
                 hud = GameObject.Find("HUD").GetComponent<HUDController>();
@@ -25,7 +26,7 @@ public class Herir : MonoBehaviour
 
             if (hud != null)
             {
-                hud.ActualizaTexto(jugador.GetVidas().ToString()); //  las vidas actuales
+                hud.ActualizaTexto(jugador.GetVidas().ToString()); // Actualiza el texto de vidas
                 Debug.Log("HUD != NULL/////HUD != NULL////HUD != NULL ");
             }
             else

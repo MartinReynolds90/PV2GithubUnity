@@ -19,11 +19,10 @@ public class GeneradorObjetoAleatorio : MonoBehaviour
     {
         //Debug.Log("GeneradorObjetoAleatorio activo en: " + gameObject.name);
 
-
         //InvokeRepeating(nameof(GenerarObjetoAleatorio), tiempoEspera, tiempoIntervalo);
     }
 
-    // Update is called once per frame
+
     void GenerarObjetoAleatorio()
     {
         int indexAleatorio = Random.Range(0, objetoPrefabs.Length);//elige un indice aleatorio utilizando el largo del arreglo y el inicio(0) y lo guarda en la variable local indexaleatorio
