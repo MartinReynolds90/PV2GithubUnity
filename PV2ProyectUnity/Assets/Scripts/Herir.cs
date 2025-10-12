@@ -11,6 +11,7 @@ public class Herir : MonoBehaviour
     public HUDController hud;
     private void OnCollisionEnter2D(Collision2D collision)
     {
+
         if (collision.gameObject.CompareTag("Player"))
         {
             Jugador jugador = collision.gameObject.GetComponent<Jugador>(); 

@@ -77030,6 +77030,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   puntos: 1
   hud: {fileID: 0}
+--- !u!114 &1979587166
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1979587156}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 894aa7ab52757e745b0370775760541e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tiempoVida: 15
 --- !u!1 &2030280077
 GameObject:
   m_ObjectHideFlags: 0
@@ -77351,6 +77364,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1930202668975122327, guid: e749c343987fecd45bb632db3c963878, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1979587164}
+    - targetCorrespondingSourceObject: {fileID: 1930202668975122327, guid: e749c343987fecd45bb632db3c963878, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1979587166}
   m_SourcePrefab: {fileID: 100100000, guid: e749c343987fecd45bb632db3c963878, type: 3}
 --- !u!1001 &5881757074048970790
 PrefabInstance:
