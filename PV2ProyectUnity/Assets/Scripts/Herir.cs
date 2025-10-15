@@ -9,6 +9,10 @@ public class Herir : MonoBehaviour
     [SerializeField] int puntos = 5;
 
     public HUDController hud;
+    [SerializeField] private AudioClip golpeSFX;//sonido de golpe
+
+
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
 
@@ -16,8 +20,12 @@ public class Herir : MonoBehaviour
         {
             Jugador jugador = collision.gameObject.GetComponent<Jugador>(); 
             jugador.ModificarVida(-puntos);
+            GameObject.Find("Musica").GetComponents<AudioSource>()[1].PlayOneShot(golpeSFX);
+
             Debug.Log(" PUNTOS DE DAÑO REALIZADOS AL JUGADOR " + puntos);//mensaje en consola
             gameObject.SetActive(false);//desactiva el objeto que colisiona con el jugador
+         
+
 
             if (hud == null)
             {
