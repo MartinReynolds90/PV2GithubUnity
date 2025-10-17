@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class Herir : MonoBehaviour
 {
     // Variables a configurar desde el editor
@@ -10,10 +11,8 @@ public class Herir : MonoBehaviour
 
     public HUDController hud;
     [SerializeField] private AudioClip golpeSFX;//sonido de golpe
-  
-
-
-
+    
+   
     private void OnCollisionEnter2D(Collision2D collision)
     {
 

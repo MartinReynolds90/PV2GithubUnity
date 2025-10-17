@@ -43,6 +43,7 @@ public class Jugador : MonoBehaviour
             OnSaltoStop.Invoke();//-----------------------------------
             Debug.Log("GAME OVER");
             FindObjectOfType<ControladorMusica>().MusicaDerrota();
+            FindObjectOfType<HUDController>().MostrarMenu();
         }
         return vida;
     }
@@ -54,6 +55,7 @@ public class Jugador : MonoBehaviour
         OnSaltoStop.Invoke();//-----------------------------------
         Debug.Log("GANASTE");
         FindObjectOfType<ControladorMusica>().MusicaVictoria();
+        FindObjectOfType<HUDController>().MostrarMenu();
     }
 
 }

@@ -23,6 +23,7 @@ public class ControladorMusica : MonoBehaviour
         }
         audioSource.loop = false;//desactivo el loop para que suene una sola vez
         audioSource.clip = musicaDerrota;
+        audioSource.volume = 0.3f;
         audioSource.Play();
     }
 }
