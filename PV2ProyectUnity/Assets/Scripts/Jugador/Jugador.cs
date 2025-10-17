@@ -42,6 +42,7 @@ public class Jugador : MonoBehaviour
             OnTextFin.Invoke("GAME OVER");//((((((((((((((((((((((((((((((((
             OnSaltoStop.Invoke();//-----------------------------------
             Debug.Log("GAME OVER");
+            FindObjectOfType<ControladorMusica>().MusicaDerrota();
         }
         return vida;
     }
@@ -52,7 +53,7 @@ public class Jugador : MonoBehaviour
         OnTextFin.Invoke("GANASTE");//(((((((((((((((((((((((((((((((((((((((
         OnSaltoStop.Invoke();//-----------------------------------
         Debug.Log("GANASTE");
-        
+        FindObjectOfType<ControladorMusica>().MusicaVictoria();
     }
 
 }

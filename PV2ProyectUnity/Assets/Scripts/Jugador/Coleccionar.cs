@@ -13,6 +13,8 @@ public class Coleccionar : MonoBehaviour
     private Stack<GameObject> items;
 
     private Progresion progresionJugador;
+    [SerializeField]
+    private AudioClip coleccionarSFX;//SONIDO
 
     private bool presionado = false;
 
@@ -63,6 +65,7 @@ public class Coleccionar : MonoBehaviour
             objetivo.transform.SetParent(Bolsa.transform);
 
             progresionJugador.GanarExperiencia(10);
+            GameObject.Find("Musica").GetComponents<AudioSource>()[1].PlayOneShot(coleccionarSFX);//SONIDO
 
         }
         

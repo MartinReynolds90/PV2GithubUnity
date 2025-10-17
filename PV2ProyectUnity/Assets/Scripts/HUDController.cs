@@ -24,6 +24,7 @@ public class HUDController : MonoBehaviour
     public void TextoFinJuego(string TextoCondicionJuego) { //((((((((((((((((((
         Debug.Log(TextoCondicionJuego);
         miTexto.text = TextoCondicionJuego;
+  
     }
 
 }

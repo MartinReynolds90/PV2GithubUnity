@@ -10,6 +10,7 @@ public class Herir : MonoBehaviour
 
     public HUDController hud;
     [SerializeField] private AudioClip golpeSFX;//sonido de golpe
+  
 
 
 
