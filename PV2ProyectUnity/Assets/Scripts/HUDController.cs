@@ -12,7 +12,7 @@ public class HUDController : MonoBehaviour
 {
     [SerializeField]
     public TextMeshProUGUI miTexto;//creo un texto TextMeshPro
-    [SerializeField] public UnityEvent OnTextoCondicion;
+
 
     [SerializeField] private GameObject PanelPausa;
     [SerializeField] private TextMeshProUGUI textoDescripcion;
@@ -48,7 +48,7 @@ public class HUDController : MonoBehaviour
         PanelPausa.SetActive(true);
         Time.timeScale = 0f;
         pausado = true;
-        textoDescripcion.text = "Objetivo del juego";
+        textoDescripcion.text = "Consigue escapar de este lugar, busca una de las cuevas para salir. Pero con cuidado, estan infectadas de enemigos. En el camino encontraras posiones de curacion, usalas con F1. Ten cuidado con las rocas lanzadas por el Jefe.";
     }
     public void ContinuarJuego() {
         PanelPausa.SetActive(false);

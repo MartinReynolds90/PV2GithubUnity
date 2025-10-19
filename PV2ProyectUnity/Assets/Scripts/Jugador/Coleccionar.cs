@@ -92,7 +92,7 @@ public class Coleccionar : MonoBehaviour
 
     private void UsarItem()
     {
-        jugador.ModificarVida(+1);//CURANDO
+        jugador.ModificarVida(+2);//CURANDO
         hud.ActualizaTexto(jugador.GetVidas().ToString());
         GameObject item = items.Pop();
         item.transform.SetParent(null);
