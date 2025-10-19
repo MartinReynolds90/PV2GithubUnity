@@ -1259,7 +1259,7 @@ RectTransform:
   m_GameObject: {fileID: 487926573}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 3.7023153, y: 3.7023153, z: 3.7023153}
+  m_LocalScale: {x: 3.6, y: 3.6, z: 3.7023153}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2058333724}
@@ -1267,7 +1267,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 355.71, y: -271}
+  m_AnchoredPosition: {x: 360, y: -271}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &487926575
@@ -2048,10 +2048,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Consigue escapar de este lugar, busca una de las cuevas para salir. Pero
-    con cuidado, estan linfectadas de enemigos. en el camino encontraras posiones
-    de curacion para recuperar tus vidas. Ten cuidado con las rocas lanzadas por
-    el Jefe.
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -2078,8 +2075,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 55
-  m_fontSizeBase: 55
+  m_fontSize: 50
+  m_fontSizeBase: 50
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -2214,7 +2211,7 @@ RectTransform:
   m_GameObject: {fileID: 745226959}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 3.5027373, y: 5.2541056, z: 4.670316}
+  m_LocalScale: {x: 3.6, y: 3.6, z: 4.670316}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1956368454}
@@ -2222,7 +2219,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -323, y: -201}
+  m_AnchoredPosition: {x: -360, y: -250}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &745226961
@@ -2331,6 +2328,18 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: -3085357382490359167, guid: ab5f861bb34a159499610dd0561dba8e, type: 3}
+    - target: {fileID: 4127018502173990154, guid: 9b4dcb12f501bff4f83dfdbe7b8f235c, type: 3}
+      propertyPath: m_Color.b
+      value: 0.20652366
+      objectReference: {fileID: 0}
+    - target: {fileID: 4127018502173990154, guid: 9b4dcb12f501bff4f83dfdbe7b8f235c, type: 3}
+      propertyPath: m_Color.g
+      value: 0.20652366
+      objectReference: {fileID: 0}
+    - target: {fileID: 4127018502173990154, guid: 9b4dcb12f501bff4f83dfdbe7b8f235c, type: 3}
+      propertyPath: m_Color.r
+      value: 0.8584906
+      objectReference: {fileID: 0}
     - target: {fileID: 4787460608491003387, guid: 9b4dcb12f501bff4f83dfdbe7b8f235c, type: 3}
       propertyPath: m_LocalScale.x
       value: 2
@@ -86102,6 +86111,18 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: -3085357382490359167, guid: ab5f861bb34a159499610dd0561dba8e, type: 3}
+    - target: {fileID: 4127018502173990154, guid: 9b4dcb12f501bff4f83dfdbe7b8f235c, type: 3}
+      propertyPath: m_Color.b
+      value: 0.764151
+      objectReference: {fileID: 0}
+    - target: {fileID: 4127018502173990154, guid: 9b4dcb12f501bff4f83dfdbe7b8f235c, type: 3}
+      propertyPath: m_Color.g
+      value: 0.24292624
+      objectReference: {fileID: 0}
+    - target: {fileID: 4127018502173990154, guid: 9b4dcb12f501bff4f83dfdbe7b8f235c, type: 3}
+      propertyPath: m_Color.r
+      value: 0.039649345
+      objectReference: {fileID: 0}
     - target: {fileID: 4787460608491003387, guid: 9b4dcb12f501bff4f83dfdbe7b8f235c, type: 3}
       propertyPath: m_LocalScale.x
       value: 2
@@ -86452,8 +86473,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 216.96944, y: 247.40929}
-  m_SizeDelta: {x: 1900, y: 1009.5643}
+  m_AnchoredPosition: {x: 217.51517, y: 217.93996}
+  m_SizeDelta: {x: 1895.3188, y: 756.78}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1263624348
 MonoBehaviour:
@@ -86468,7 +86489,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.6862745}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.09803922}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -86521,7 +86542,7 @@ RectTransform:
   m_GameObject: {fileID: 1275707510}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 3.5215108, y: 3.5215108, z: 3.5215108}
+  m_LocalScale: {x: 3.6, y: 3.6, z: 3.6466413}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 566920936}
@@ -86529,7 +86550,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -353, y: -278}
+  m_AnchoredPosition: {x: -360, y: -270}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1275707512
@@ -97421,7 +97442,7 @@ RectTransform:
   m_GameObject: {fileID: 1887488153}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 3.6278439, y: 5.1696773, z: 3.6278439}
+  m_LocalScale: {x: 3.6, y: 3.6, z: 3.467493}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1434727395}
@@ -97429,7 +97450,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 342, y: -202}
+  m_AnchoredPosition: {x: 360, y: -250}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1887488155
@@ -98258,7 +98279,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   camara: {fileID: 1898586028}
-  colorNoche: {r: 0.09747717, g: 0.09607513, b: 0.16037738, a: 1}
+  colorNoche: {r: 0.10912405, g: 0.08410466, b: 0.509434, a: 1}
   duracionDia: 34
   dias: 14
 --- !u!4 &2030280079

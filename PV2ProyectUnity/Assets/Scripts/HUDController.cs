@@ -48,7 +48,7 @@ public class HUDController : MonoBehaviour
         PanelPausa.SetActive(true);
         Time.timeScale = 0f;
         pausado = true;
-        textoDescripcion.text = "Consigue escapar de este lugar, busca una de las cuevas para salir. Pero con cuidado, estan infectadas de enemigos. En el camino encontraras posiones de curacion, usalas con F1. Ten cuidado con las rocas lanzadas por el Jefe.";
+        textoDescripcion.text = "Consigue escapar de este lugar, busca una de las cuevas para salir. Pero con cuidado, estan infectadas de enemigos. En el camino encontraras posiones de curacion, usalas [F1], en el orden correcto Azul, Rojo, y Verde al final. Solo así tendran efecto. Ten cuidado con las rocas lanzadas por el Jefe.";
     }
     public void ContinuarJuego() {
         PanelPausa.SetActive(false);
