@@ -2146,7 +2146,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: New Text
+  m_text: Consigue escapar de este lugar, busca una de las cuevas para salir. Pero
+    con cuidado, estan linfectadas de enemigos. en el camino encontraras posiones
+    de curacion para recuperar tus vidas. Ten cuidado con las rocas lanzadas por
+    el Jefe.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}

@@ -22,6 +22,15 @@ public class HUDController : MonoBehaviour
 
     [SerializeField] private GameObject PanelFinJuego;
 
+    private void Start()
+    {
+        if (miTexto != null && !miTexto.gameObject.activeInHierarchy)
+        {
+            miTexto.gameObject.SetActive(true);
+        }
+    }
+
+
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape)) {

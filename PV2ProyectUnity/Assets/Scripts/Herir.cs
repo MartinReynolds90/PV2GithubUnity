@@ -14,8 +14,7 @@ public class Herir : MonoBehaviour
 
     private void Awake()
     {
-        if (hud == null)
-        {
+        if (hud == null) {
             hud = GameObject.Find("HUD").GetComponent<HUDController>();
         }
     }
