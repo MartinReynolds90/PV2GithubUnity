@@ -2,10 +2,13 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem.HID;
 
 public class Coleccionar : MonoBehaviour
 {
-  
+    private Jugador jugador;
+    private HUDController hud;
+
     [SerializeField] private GameObject Bolsa;
     [SerializeField] private Transform padreObjetivos;
 
@@ -27,7 +30,8 @@ public class Coleccionar : MonoBehaviour
         VerObjetivos();
 
         progresionJugador = GetComponent<Progresion>();
-   
+        jugador = GetComponent<Jugador>();//inicializo una clase que esta en el mismo object que el script coleccionar
+        hud = GameObject.Find("HUD").GetComponent<HUDController>();//inicializo unamclase que no esta en el mismo object
 
     }
 
@@ -88,6 +92,8 @@ public class Coleccionar : MonoBehaviour
 
     private void UsarItem()
     {
+        jugador.ModificarVida(+1);//CURANDO
+        hud.ActualizaTexto(jugador.GetVidas().ToString());
         GameObject item = items.Pop();
         item.transform.SetParent(null);
         item.SetActive(true);
