@@ -9,14 +9,45 @@ using UnityEngine.SceneManagement;
 
 
 public class HUDController : MonoBehaviour
-{    
+{
     [SerializeField]
     public TextMeshProUGUI miTexto;//creo un texto TextMeshPro
     [SerializeField] public UnityEvent OnTextoCondicion;
 
-    //00000000000000------MENU-------000000000000000000000000000000
+    [SerializeField] private GameObject PanelPausa;
+    [SerializeField] private TextMeshProUGUI textoDescripcion;
+
+    private bool pausado = false;
+
+
     [SerializeField] private GameObject PanelFinJuego;
 
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape)) {
+            if (pausado)
+            {
+                ContinuarJuego();
+            }
+            else {
+                PausarJuego();
+            }
+        }
+    }
+
+    public void PausarJuego() {
+        PanelPausa.SetActive(true);
+        Time.timeScale = 0f;
+        pausado = true;
+        textoDescripcion.text = "Objetivo del juego";
+    }
+    public void ContinuarJuego() {
+        PanelPausa.SetActive(false);
+        Time.timeScale = 1f;
+        pausado = false;
+    }
+    
+    //00000000000000------MENU-------000000000000000000000000000000
     public void MostrarMenu()
     {
         Debug.Log("MOSTRANDO PANELFINJUEGO");

@@ -97,6 +97,7 @@ public class Coleccionar : MonoBehaviour
         GameObject item = items.Pop();
         item.transform.SetParent(null);
         item.SetActive(true);
+        Destroy(item);
     }
 
 }

@@ -10,8 +10,13 @@ public class PlayerHealth : MonoBehaviour
     public Jugador jugador;
     public HUDController hud;
 
+    private void Awake()
+    {
+        if (hud == null) {
+            hud = GameObject.Find("HUD").GetComponent<HUDController>();
+        }
+    }
 
-  
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Player")) {
@@ -19,16 +24,9 @@ public class PlayerHealth : MonoBehaviour
             jugador.ModificarVida(-puntos);
            
 
-            if (hud == null)
-            {
-                hud = GameObject.Find("HUD").GetComponent<HUDController>();
-                Debug.Log("HUD = NULL---HUD = NULL--HUD = NULL ");
-            }
-
             if (hud != null)
             {
                 hud.ActualizaTexto(jugador.GetVidas().ToString()); //  las vidas actuales
-                Debug.Log("HUD != NULL/////HUD != NULL////HUD != NULL ");
             }
             else
             {

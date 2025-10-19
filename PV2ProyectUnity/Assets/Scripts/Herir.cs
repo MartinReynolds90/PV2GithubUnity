@@ -11,8 +11,14 @@ public class Herir : MonoBehaviour
 
     public HUDController hud;
     [SerializeField] private AudioClip golpeSFX;//sonido de golpe
-    
-   
+
+    private void Awake()
+    {
+        if (hud == null)
+        {
+            hud = GameObject.Find("HUD").GetComponent<HUDController>();
+        }
+    }
     private void OnCollisionEnter2D(Collision2D collision)
     {
 
@@ -26,17 +32,10 @@ public class Herir : MonoBehaviour
             gameObject.SetActive(false);//desactiva el objeto que colisiona con el jugador
          
 
-
-            if (hud == null)
-            {
-                hud = GameObject.Find("HUD").GetComponent<HUDController>();
-                Debug.Log("HUD = NULL---HUD = NULL--HUD = NULL ");
-            }
-
             if (hud != null)
             {
                 hud.ActualizaTexto(jugador.GetVidas().ToString()); // Actualiza el texto de vidas
-                Debug.Log("HUD != NULL/////HUD != NULL////HUD != NULL ");
+
             }
             else
             {
